@@ -29,7 +29,7 @@ public class App{
                 checking_for_digit.find()) {
                     System.out.println("Your password is strong enough");
             } else {
-                System.out.println("Weak password. Try something better");
+                System.out.println("Weak password. Try something better.");
             }
         } else {
             System.out.println("Your password must consist of 8 charachters, including one digits, \nuppercase and lowercase letters altogether. Try again.");

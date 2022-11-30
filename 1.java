@@ -30,7 +30,7 @@ public class App {
                         System.out.println("Wrong date. Month under number " + month + " includes only 30 days.");
                     }
                 } else {
-                    System.out.println("all good");
+                    System.out.println("all good.");
                 }
             } else {
                 System.out.println("didn't match, sorry(");
