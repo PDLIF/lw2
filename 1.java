@@ -19,7 +19,7 @@ public class App {
 
                 if (month == 2) { 
                     if (((day <= 29) && (year % 4 == 0)) || ((day <= 28) && (year % 4 != 0))) {
-                        System.out.println("you're alright");
+                        System.out.println("all good");
                     } else if ((day > 29) && (year % 4 == 0)) {
                         System.out.println("fail (that's the leap year! Can't you see?)");
                     } else if ((day > 28) && (year % 4 != 0)) {
@@ -27,7 +27,7 @@ public class App {
                     }
                 } else if (month == 4 || month == 6 || month == 9 || month == 11) {
                     if (day > 30) {
-                        System.out.println("wrong date. Month under number " + month + " includes only 30 days.");
+                        System.out.println("Wrong date. Month under number " + month + " includes only 30 days.");
                     }
                 } else {
                     System.out.println("all good");
