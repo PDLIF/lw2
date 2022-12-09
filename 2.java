@@ -3,11 +3,12 @@ import java.util.regex.*;
 
 public class App{
     public static void main(String[] args) {
+        while (true) { 
         Scanner scan = new Scanner(System.in);
         System.out.print("your password: ");
         String password = scan.next();
 
-        String regexp1 = "\\w{8}";
+        String regexp1 = "\\w{8,}";
         String regexp2 = "[A-Z]";
         String regexp3 = "[a-z]";
         String regexp4 = "\\d";
@@ -16,6 +17,7 @@ public class App{
         Pattern valid1 = Pattern.compile(regexp2);
         Pattern valid2 = Pattern.compile(regexp3);
         Pattern valid3 = Pattern.compile(regexp4);
+
 
 
         Matcher password_matcher = mainPattern.matcher(password);
@@ -27,13 +29,14 @@ public class App{
             if (checking_for_uppercase.find() && 
                 checking_for_lowercase.find() &&
                 checking_for_digit.find()) {
-                    System.out.println("Your password is strong enough");
+                System.out.println("Your password is strong enough.");
+                return;
             } else {
                 System.out.println("Weak password. Try something better.");
             }
         } else {
-            System.out.println("Your password must consist of 8 charachters, including one digits, \nuppercase and lowercase letters altogether. Try again.");
+            System.out.println("Weak Password. Your password must consist of 8 charachters, including one digits, uppercase and lowercase letters altogether. Try again.");
         }
-
+    }
     }
 }

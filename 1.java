@@ -19,22 +19,23 @@ public class App {
 
                 if (month == 2) { 
                     if (((day <= 29) && (year % 4 == 0)) || ((day <= 28) && (year % 4 != 0))) {
-                        System.out.println("all good");
+                        System.out.println("All good. Entered date is valid.");
                     } else if ((day > 29) && (year % 4 == 0)) {
-                        System.out.println("fail (that's the leap year! Can't you see?)");
+                        System.out.println("fail (that's the leap year!)");
                     } else if ((day > 28) && (year % 4 != 0)) {
-                        System.out.println("fail (oh man, none-leap year's Fabruary consists not much than 28 days. \nYou shoud've known that)");
+                        System.out.println("Fail (none-leap year's Fabruary consists not much than 28 days.)");
                     }
                 } else if (month == 4 || month == 6 || month == 9 || month == 11) {
                     if (day > 30) {
-                        System.out.println("Wrong date. Month under number " + month + " includes only 30 days.");
+                        System.out.println("Wrong date. Entered date does not exist. Month under number " + month + " includes only 30 days.");
                     }
                 } else {
-                    System.out.println("all good.");
+                    System.out.println("All good. Entered date is valid.");
                 }
             } else {
-                System.out.println("didn't match, sorry(");
+                System.out.println("Entered date's format is invalid, sorry(");
             }
+        scan.close();
     } 
 }
 
